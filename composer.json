@@ -2,12 +2,23 @@
     "name": "dylan-malandain/discord-php",
     "description": "Discord PHP is an unofficial API for interacting with the Discord voice and text service.",
     "type": "library",
+    "license": "MIT",
     "require": {
         "tightenco/collect": "^7.19",
         "guzzlehttp/psr7": "^1.6",
-        "larapack/dd": "^1.1"
+        "larapack/dd": "^1.1",
+        "evenement/evenement": "^3.0",
+        "symfony/console": "^5.1",
+        "nesbot/carbon": "^2.37"
     },
-    "license": "MIT",
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.25"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
     "authors": [
         {
             "name": "Dylan Malandain",

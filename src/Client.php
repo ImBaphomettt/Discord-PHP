@@ -1,5 +1,13 @@
 <?php
 
+namespace DiscordPHP;
+
+
+use DiscordPHP\Internal\Console\Logs;
+use Evenement\EventEmitterTrait;
+use splitbrain\phpcli\CLI;
+use splitbrain\phpcli\Options;
+
 /**
  * @author Dylan Malandain
  *
@@ -7,11 +15,18 @@
  */
 class Client
 {
+    use EventEmitterTrait;
+    use Logs;
+
+    public function __construct()
+    {
+        $this->settings();
+    }
 
     /**
-     * Client constructor.
+     * @return void
      */
-    public function __construct()
+    public function start(): void
     {
     }
 
